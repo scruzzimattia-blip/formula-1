@@ -2,9 +2,13 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+from streamlit_autorefresh import st_autorefresh
 from data_provider import get_session_data, get_track_layout, get_driver_positions
 
 st.set_page_config(page_title="F1 Live Dashboard", layout="wide")
+
+# Dashboard alle 60 Sekunden automatisch aktualisieren
+count = st_autorefresh(interval=60000, limit=100, key="f1_refresh")
 
 st.title("🏎️ Formel 1 Live-Dashboard")
 

@@ -5,3 +5,4 @@ plotly
 numpy
 pytest
 flake8
+streamlit-autorefresh
