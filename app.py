@@ -27,7 +27,7 @@ if st.sidebar.button("Daten laden"):
             st.error("Session konnte nicht gefunden werden.")
 
 if st.session_state.session_data:
-    session = st.session_state.session_state.session_data # Korrektur: st.session_state.session_data
+    session = st.session_state.session_data
     
     col1, col2 = st.columns([3, 1])
     
